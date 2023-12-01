@@ -44,7 +44,7 @@ class Home(QWidget):
 class Chatbot():
 
     def __init__(self):
-        openai.api_key = "#Colocá aca tu API key de OpenAI. Andá a '' para obtener una"
+        openai.api_key = "#Colocá aca tu API key de OpenAI. Andá a 'https://openai.com/product' y hace click en 'Get Started' para obtener una"
 
     def respuesta(self, input):
         res = openai.Completion.create(engine="gpt-3.5-turbo-instruct", prompt=input, max_tokens=2000, temperature=0.5).choices[0].text.strip()
